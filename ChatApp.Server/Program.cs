@@ -20,8 +20,6 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseCors("reactapp");
-app.UseAuthorization();
-app.MapControllers();
 app.MapHub<ChatHub>("/chat");
 
 app.Run();
