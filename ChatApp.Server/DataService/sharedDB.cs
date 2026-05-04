@@ -1,0 +1,11 @@
+using System.Collections.Concurrent;
+using ChattApp.Server.Models;
+
+namespace ChattApp.Server.DataService
+{
+    public class sharedDB
+    {
+        private readonly ConcurrentDictionary<string, UserConnection> _connection = new();
+        public ConcurrentDictionary<string, UserConnection> Connection => _connection;
+    }
+}
